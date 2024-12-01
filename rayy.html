@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray Cílios</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('main section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+
+        window.onload = () => {
+            showSection('homepage');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('homepage')">Início</a></li>
+                <li><a href="#" onclick="showSection('catalogo')">Catálogo</a></li>
+                <li><a href="#" onclick="showSection('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <section id="homepage" style="display: none;">
+            <h1>Ray Cílios</h1>
+            <div class="logo">
+                <img src="img/olho.png" alt="Imagem da Logo, um olho humano olhando o horizonte" >
+            </div>
+            <div class="paragrafo">
+            <p>"A beleza está nos olhos de quem a vê."</p>
+            </div>
+        </section>
+        <section id="catalogo" style="display: none;">
+            <h1>Catálogo</h1>
+            <div class="catalogo">
+                <div class="catalogo-item">
+                    <img src="img/efeito natural.jpg" alt="Cílios em efeito natural">
+                    <p>Efeito Natural</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="img/efeito gatinho.jpg" alt="Cílios em efeito gatinho">
+                    <p>Efeito Gatinho</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="img/efeito boneca.jpg" alt="Cílios em efeito boneca">
+                    <p>Efeito Boneca</p>
+                </div>
+            </div>
+        </section>
+        <section id="contato" style="display: none;">
+            <h1>Contato</h1>
+            <div class="contato">
+                <p>Instagram: <a href="https://www.instagram.com/ray__cilios" target="_blank">@ray__cilios</a></p>
+                <p>WhatsApp: <a href="https://api.whatsapp.com/message/4ZVUNVME7ANIO1?autoload=1&app_absent=0" target="_blank">11 96136-3562</a></p>
+                <p>Endereço: <a href="https://maps.app.goo.gl/U626ATtBCGmdaAhUA" target="_blank"> R. Sanhaçu, 188 - Costa e Silva, Joinville </a></p>
+            </div>
+        </section>
+    </main>
+</body> 
+</html>
